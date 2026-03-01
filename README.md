@@ -1,20 +1,64 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="Caroline Gonzaga Portfolio" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+# Caroline Gonzaga | Software QA Engineer
+### Quality Assurance & Test Automation Specialist
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 🚀 Sobre o Projeto
+Este é o meu portfólio profissional, desenvolvido para apresentar minhas competências técnicas, certificações e projetos na área de **Garantia de Qualidade (QA)**. O site é responsivo, multilíngue (PT/EN) e foi construído com tecnologias modernas de desenvolvimento web.
 
-View your app in AI Studio: https://ai.studio/apps/8bf14463-1ce0-476f-9338-155cbe8677f1
+🌐 **Acesse online:** [https://caahg.github.io/caroline-gonzaga-portfolio/](https://caahg.github.io/caroline-gonzaga-portfolio/)
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🛠️ Tecnologias Utilizadas
+- **Core:** React 19 + TypeScript
+- **Styling:** Tailwind CSS + Motion for React (framer-motion)
+- **Build Tool:** Vite
+- **Ícones:** Lucide React
+- **CI/CD:** GitHub Actions (Deploy automático para GitHub Pages)
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 💻 Como Rodar Localmente
+
+Siga os passos abaixo para baixar e rodar este projeto na sua máquina:
+
+### **Pré-requisitos**
+- Node.js instalado (versão 18 ou superior recomendada)
+
+1. **Clonar o Repositório:**
+   ```bash
+   git clone https://github.com/CaahG/caroline-gonzaga-portfolio.git
+   cd caroline-gonzaga-portfolio
+   ```
+
+2. **Instalar Dependências:**
+   ```bash
+   npm install
+   ```
+
+3. **Variáveis de Ambiente (Opcional):**
+   *Crie um arquivo `.env` na raiz (se necessário para funcionalidades de IA)*
+   ```env
+   GEMINI_API_KEY=sua_chave_aqui
+   ```
+
+4. **Iniciar o Servidor de Desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+   *O site estará disponível em `http://localhost:3000`*
+
+---
+
+## ⚖️ Licença
+Este projeto é para uso de apresentação pessoal. Sinta-se à vontade para explorar o código.
+
+---
+<div align="center">
+Desenvolvido por <b>Caroline Gonzaga</b>.
+</div>
