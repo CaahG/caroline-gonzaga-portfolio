@@ -70,7 +70,7 @@ export default function App() {
                 <span>{lang === 'pt' ? 'PT-BR' : 'EN-US'}</span>
                 <Languages className="w-4 h-4" />
               </button>
-              <button className="md:hidden p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800">
+              <button className="md:hidden p-2 rounded-lg hover:bg-slate-800">
                 <Menu className="w-6 h-6" />
               </button>
             </div>
@@ -195,7 +195,7 @@ export default function App() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="group p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 transition-all hover:bg-slate-900/40 relative overflow-hidden"
+                  className="group p-8 rounded-3xl border border-slate-800 hover:border-primary/50 transition-all hover:bg-slate-900/40 relative overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <span className="font-mono text-4xl font-black">0{idx + 1}</span>
@@ -229,8 +229,8 @@ export default function App() {
             </div>
             <div className="space-y-12">
               {content.experience.map((exp, idx) => (
-                <div key={idx} className="relative pl-10 before:absolute before:left-[11px] before:top-2 before:h-full before:w-[2px] before:bg-slate-200 dark:before:bg-slate-800 last:before:hidden">
-                  <div className={`absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-background-dark ${exp.current ? 'bg-primary animate-pulse' : 'bg-slate-300 dark:bg-slate-700'}`}></div>
+                <div key={idx} className="relative pl-10 before:absolute before:left-[11px] before:top-2 before:h-full before:w-[2px] before:bg-slate-800 last:before:hidden">
+                  <div className={`absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-background-dark ${exp.current ? 'bg-primary animate-pulse' : 'bg-slate-700'}`}></div>
                   <div className="space-y-4 p-6 rounded-2xl bg-slate-900/20 border border-slate-800 hover:border-primary/30 transition-all">
                     <div className="flex flex-wrap items-center justify-between gap-4">
                       <div className="space-y-1">
@@ -242,10 +242,10 @@ export default function App() {
                       </div>
                       <StatusBadge type={exp.current ? 'success' : 'info'} label={exp.period} />
                     </div>
-                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                    <p className="text-slate-400 leading-relaxed text-sm">
                       {exp.description}
                     </p>
-                    <div className="pt-4 border-t border-slate-100 dark:border-slate-800">
+                    <div className="pt-4 border-t border-slate-800">
                       <p className="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
                         <ShieldCheck className="w-3 h-3" />
                         Key Deliverables / Assertions
@@ -292,7 +292,7 @@ export default function App() {
                     {skill.items.map((item, iIdx) => (
                       <span
                         key={iIdx}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold tracking-tight ${skill.special ? 'bg-primary/5 text-primary border border-primary/20' : 'bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-700'}`}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold tracking-tight ${skill.special ? 'bg-primary/5 text-primary border border-primary/20' : 'bg-slate-800 text-slate-400 border border-slate-700'}`}
                       >
                         {item}
                       </span>
@@ -325,7 +325,7 @@ export default function App() {
                 </div>
               </div>
               <div className="flex-1 w-full max-w-md">
-                <div className="aspect-square rounded-full border-2 border-dashed border-slate-300 dark:border-slate-700 p-8 flex items-center justify-center relative">
+                <div className="aspect-square rounded-full border-2 border-dashed border-slate-700 p-8 flex items-center justify-center relative">
                   <div className="absolute inset-0 bg-primary/5 rounded-full animate-pulse"></div>
                   <div className="text-center z-10">
                     <GraduationCap className="w-16 h-16 text-primary mx-auto mb-4" />
@@ -456,14 +456,14 @@ export default function App() {
               </a>
               <a
                 href={content.profile.linkedin}
-                className="flex items-center gap-3 px-8 py-4 rounded-xl bg-slate-800 font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                className="flex items-center gap-3 px-8 py-4 rounded-xl bg-slate-800 font-bold hover:bg-slate-700 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
               <a
                 href={content.profile.github}
-                className="flex items-center gap-3 px-8 py-4 rounded-xl bg-slate-800 font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                className="flex items-center gap-3 px-8 py-4 rounded-xl bg-slate-800 font-bold hover:bg-slate-700 transition-colors"
               >
                 <Github className="w-5 h-5" />
                 GitHub
