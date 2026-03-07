@@ -42,9 +42,9 @@ export default function App() {
   };
 
   return (
-    <div className="relative flex min-h-screen flex-col overflow-x-hidden dark">
+    <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-background-dark text-slate-100">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 w-full border-b border-slate-800 bg-background-dark/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-2">
@@ -230,7 +230,7 @@ export default function App() {
             <div className="space-y-12">
               {content.experience.map((exp, idx) => (
                 <div key={idx} className="relative pl-10 before:absolute before:left-[11px] before:top-2 before:h-full before:w-[2px] before:bg-slate-200 dark:before:bg-slate-800 last:before:hidden">
-                  <div className={`absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-background-light dark:border-background-dark ${exp.current ? 'bg-primary animate-pulse' : 'bg-slate-300 dark:bg-slate-700'}`}></div>
+                  <div className={`absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-background-dark ${exp.current ? 'bg-primary animate-pulse' : 'bg-slate-300 dark:bg-slate-700'}`}></div>
                   <div className="space-y-4 p-6 rounded-2xl bg-white dark:bg-slate-900/20 border border-slate-100 dark:border-slate-800 hover:border-primary/30 transition-all">
                     <div className="flex flex-wrap items-center justify-between gap-4">
                       <div className="space-y-1">

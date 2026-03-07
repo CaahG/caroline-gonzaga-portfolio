@@ -13,10 +13,14 @@
 }
 
 @layer base {
-  body {
-    @apply font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  html {
+    @apply bg-background-dark;
   }
-  
+
+  body {
+    @apply font-display bg-background-dark text-slate-100 transition-colors duration-300;
+  }
+
   .font-mono {
     font-family: var(--font-mono);
   }
@@ -38,8 +42,13 @@
 }
 
 @keyframes scan {
-  0% { top: 0; }
-  100% { top: 100%; }
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
 }
 
 .material-symbols-outlined {
