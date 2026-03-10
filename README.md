@@ -9,7 +9,7 @@
 ## 🚀 Sobre o Projeto
 Este é o meu portfólio profissional, desenvolvido para apresentar minhas competências técnicas, certificações e projetos na área de **Garantia de Qualidade (QA)**. O site é responsivo, multilíngue (PT/EN) e foi construído com tecnologias modernas de desenvolvimento web.
 
-🌐 **Acesse online:** [https://caahg.github.io/caroline-gonzaga-portfolio/](https://caahg.github.io/caroline-gonzaga-portfolio/)
+🌐 **Acesse online:** [https://caahg.github.io](https://caahg.github.io)
 
 ---
 
