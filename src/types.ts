@@ -103,6 +103,7 @@ export interface ProjectItem {
   description: string;
   tags: string[];
   image: string;
+  link?: string;
 }
 
 export interface Projects {

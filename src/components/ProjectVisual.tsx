@@ -2,11 +2,38 @@ import { motion } from "motion/react";
 
 interface ProjectVisualProps {
     title: string;
+    image?: string;
 }
 
-export const ProjectVisual = ({ title }: ProjectVisualProps) => {
+export const ProjectVisual = ({ title, image }: ProjectVisualProps) => {
     // Simple code snippets based on common project types
     const getCodeSnippet = () => {
+        if (title.toLowerCase().includes('posterstore')) {
+            return [
+                `test('posterstore e2e flow', async ({ page }) => {`,
+                `  await page.goto('/login');`,
+                `  await page.fill('#user', 'qa_tester');`,
+                `  await page.click('text=Login');`,
+                `  await page.click('.add-to-cart');`,
+                `  await expect(page.locator('.cart-count')).toHaveText('1');`,
+                `  await page.click('#checkout');`,
+                `  await expect(page).toHaveURL(/.*order-success/);`,
+                `});`
+            ];
+        }
+        if (title.toLowerCase().includes('jsonplaceholder')) {
+            return [
+                `describe('JSONPlaceholder API Validation', () => {`,
+                `  it('should validate /posts/1 structure', async () => {`,
+                `    const response = await fetch('https://api/posts/1');`,
+                `    const data = await response.json();`,
+                `    expect(response.status).toBe(200);`,
+                `    expect(data).toHaveProperty('userId');`,
+                `    expect(data).toHaveProperty('title');`,
+                `  });`,
+                `});`
+            ];
+        }
         if (title.toLowerCase().includes('e-commerce') || title.toLowerCase().includes('checkout')) {
             return [
                 `test('checkout flow', async ({ page }) => {`,
@@ -16,6 +43,19 @@ export const ProjectVisual = ({ title }: ProjectVisualProps) => {
                 `  await page.fill('#card', '4xxx-xxxx');`,
                 `  await page.click('#place-order');`,
                 `  await expect(page.locator('.success')).toBeVisible();`,
+                `});`
+            ];
+        }
+        if (title.toLowerCase().includes('tacomex') || title.toLowerCase().includes('8-bit')) {
+            return [
+                `test('tacomex 8-bit shop flow', async ({ page }) => {`,
+                `  await page.goto('/shop');`,
+                `  await page.click('text=Tacos');`,
+                `  await page.click('#checkout-btn');`,
+                `  await expect(page).toHaveURL(/.*checkout/);`,
+                `  await page.fill('#promo', '8BIT-LOVER');`,
+                `  await page.click('#complete-order');`,
+                `  expect(page.locator('.pixel-success')).toBeVisible();`,
                 `});`
             ];
         }
@@ -48,6 +88,19 @@ export const ProjectVisual = ({ title }: ProjectVisualProps) => {
         <div className="w-full h-full bg-[#0a0c10] p-6 font-mono text-[11px] relative overflow-hidden group/visual">
             {/* Background Grid Pattern */}
             <div className="absolute inset-0 qa-grid opacity-10"></div>
+
+            {/* Background Image if available */}
+            {image && (
+                <div
+                    className="absolute inset-0 z-0 opacity-20 transition-opacity group-hover/visual:opacity-40"
+                    style={{
+                        backgroundImage: `url(${image})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        filter: 'grayscale(100%) contrast(150%)'
+                    }}
+                />
+            )}
 
             {/* Window Controls Overlay */}
             <div className="absolute top-4 left-6 flex gap-1.5 opacity-40 group-hover/visual:opacity-100 transition-opacity">

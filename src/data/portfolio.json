@@ -229,16 +229,25 @@
       "githubLink": "Repositórios no GitHub",
       "items": [
         {
-          "title": "Suíte de Automação E-Commerce",
-          "description": "Framework robusto de testes E2E usando Playwright e Page Object Model para fluxos críticos de checkout.",
-          "tags": ["Playwright", "TypeScript", "CI/CD"],
-          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmAS1TQ_0gk7ZTPKWgm1LjE8DzPf0Se8aDaT637QZOZwfBVAUTY8dYiT6t_CeJ-y8cWM6Ekdsb3PtSKtJcL0tqhxkW473GirvdeD9DOUS2_Nd-d3qfP2wusDiwDCn4xmIegcrKGkFZsCs7f3hNSkWX1qxCnA5lmP89s5xdl8rbgtVye2eFLpnySPsrYn0Waf64SSuy26lOPuMW2mURSbnpFnuHnuumjqpXGWa-r8HHFnj4J98-t4vQT6nyoGUcgERua8st9r0r4bBJ"
+          "title": "Automação E-Commerce - Posterstore",
+          "description": "Suite de testes ponta a ponta para uma loja virtual, cobrindo fluxos de login, gerenciamento de produtos e checkout com Playwright e Docker.",
+          "tags": ["Playwright", "E-Commerce", "Docker", "TypeScript"],
+          "image": "/projects/posterstore.png",
+          "link": "https://github.com/CaahG/playwright-posterstore"
         },
         {
-          "title": "Validação de API Restful",
-          "description": "Suíte abrangente de testes de API usando Jest e Supertest com integração contínua.",
-          "tags": ["Jest", "API", "GitHub Actions"],
-          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCEfPhXrmuH0k5fX293NTk8w47zmfIS7O1eoPDN14K7ZGjCdWq7eAc5o9bKj1v44T3DS_kJDKGbpCAfc1I-VqWnNAn_hrgRghwLZZnFj1ThcIDfZ8nJAoft4Qo4C4hxjUjWsmrz2cevJG_ncl54tXBe61XnPkfI_Fg0tzEpQxhmykRRHZWu82-jNweAkJuszs4Ojo2jCs6nvLDlglVpWyKGDvNyMdlg5BTKKqcZBtbdY4psWuu_K17SkGhlDgoX3h5FRnEeWpvC9wr3"
+          "title": "Validação de API - JSONPlaceholder",
+          "description": "Testes de API focados em validar estrutura de resposta, status codes e integridade de dados para endpoints REST.",
+          "tags": ["API Testing", "REST", "Automation"],
+          "image": "/projects/jsonplaceholder.png",
+          "link": "https://github.com/CaahG/jsonplaceholder---API"
+        },
+        {
+          "title": "TacoMex 8-Bit Shop - Análise de QA",
+          "description": "Análise completa de QA em uma aplicação full-stack de delivery retrô, validando Frontend, Backend e infraestrutura Docker.",
+          "tags": ["QA Full-Stack", "Docker", "Fastify", "React", "Redis"],
+          "image": "/projects/tacomex.png",
+          "link": "https://github.com/CaahG/taco-teste-fullstack"
         }
       ]
     },
@@ -481,16 +490,25 @@
       "githubLink": "GitHub Repositories",
       "items": [
         {
-          "title": "E-Commerce Automation Suite",
-          "description": "Robust E2E testing framework using Playwright and Page Object Model for critical checkout flows.",
-          "tags": ["Playwright", "TypeScript", "CI/CD"],
-          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmAS1TQ_0gk7ZTPKWgm1LjE8DzPf0Se8aDaT637QZOZwfBVAUTY8dYiT6t_CeJ-y8cWM6Ekdsb3PtSKtJcL0tqhxkW473GirvdeD9DOUS2_Nd-d3qfP2wusDiwDCn4xmIegcrKGkFZsCs7f3hNSkWX1qxCnA5lmP89s5xdl8rbgtVye2eFLpnySPsrYn0Waf64SSuy26lOPuMW2mURSbnpFnuHnuumjqpXGWa-r8HHFnj4J98-t4vQT6nyoGUcgERua8st9r0r4bBJ"
+          "title": "E-Commerce Automation - Posterstore",
+          "description": "End-to-end test suite for a virtual store, covering login, product management, and checkout flows using Playwright and Docker.",
+          "tags": ["Playwright", "E-Commerce", "Docker", "TypeScript"],
+          "image": "/projects/posterstore.png",
+          "link": "https://github.com/CaahG/playwright-posterstore"
         },
         {
-          "title": "Restful API Validation",
-          "description": "Comprehensive API testing suite using Jest and Supertest with continuous integration.",
-          "tags": ["Jest", "API", "GitHub Actions"],
-          "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCEfPhXrmuH0k5fX293NTk8w47zmfIS7O1eoPDN14K7ZGjCdWq7eAc5o9bKj1v44T3DS_kJDKGbpCAfc1I-VqWnNAn_hrgRghwLZZnFj1ThcIDfZ8nJAoft4Qo4C4hxjUjWsmrz2cevJG_ncl54tXBe61XnPkfI_Fg0tzEpQxhmykRRHZWu82-jNweAkJuszs4Ojo2jCs6nvLDlglVpWyKGDvNyMdlg5BTKKqcZBtbdY4psWuu_K17SkGhlDgoX3h5FRnEeWpvC9wr3"
+          "title": "API Validation - JSONPlaceholder",
+          "description": "API tests focused on validating response structure, status codes, and data integrity for REST endpoints.",
+          "tags": ["API Testing", "REST", "Automation"],
+          "image": "/projects/jsonplaceholder.png",
+          "link": "https://github.com/CaahG/jsonplaceholder---API"
+        },
+        {
+          "title": "TacoMex 8-Bit Shop - QA Analysis",
+          "description": "Full-stack QA analysis of a retro-themed delivery application, validating Frontend, Backend, and Docker infrastructure.",
+          "tags": ["Full-Stack QA", "Docker", "Fastify", "React", "Redis"],
+          "image": "/projects/tacomex.png",
+          "link": "https://github.com/CaahG/taco-teste-fullstack"
         }
       ]
     },

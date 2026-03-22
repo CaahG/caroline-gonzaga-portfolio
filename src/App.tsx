@@ -402,8 +402,17 @@ export default function App() {
                 <motion.div
                   key={idx}
                   whileHover={{ y: -10 }}
-                  className="group rounded-2xl overflow-hidden bg-background-dark border border-slate-800 shadow-sm hover:shadow-2xl transition-all"
+                  className="group rounded-2xl overflow-hidden bg-background-dark border border-slate-800 shadow-sm hover:shadow-2xl transition-all relative"
                 >
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 z-30"
+                      aria-label={`View ${project.title} on GitHub`}
+                    />
+                  )}
                   <div className="aspect-video bg-slate-800 overflow-hidden relative border-b border-slate-800">
                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center backdrop-blur-[2px]">
                       <div className="bg-slate-950 px-6 py-3 rounded-full border border-primary/50 text-primary font-bold shadow-2xl scale-90 group-hover:scale-100 transition-transform flex items-center gap-2">
@@ -411,7 +420,7 @@ export default function App() {
                         <span>Inspect Scenario</span>
                       </div>
                     </div>
-                    <ProjectVisual title={project.title} />
+                    <ProjectVisual title={project.title} image={project.image} />
                     <div className="absolute top-4 right-4 z-20">
                       <StatusBadge type="success" label="Passed" />
                     </div>
@@ -422,7 +431,7 @@ export default function App() {
                       <span className="text-[10px] font-mono font-bold text-slate-500 uppercase">Scenario _{idx + 1}</span>
                     </div>
                     <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
-                    <p className="text-slate-500 text-sm mb-8 leading-relaxed">
+                    <p className="text-slate-400 text-sm mb-8 leading-relaxed">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap items-center gap-3">
