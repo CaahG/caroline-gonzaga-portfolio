@@ -43,22 +43,26 @@
         {
           "title": "Foco em Qualidade",
           "description": "Garantia de que cada entrega atenda aos mais altos padrões de excelência e funcionalidade.",
-          "icon": "Verified"
+          "icon": "Verified",
+          "metric": "Cobertura 95%+ garantida"
         },
         {
           "title": "Eficiência com IA",
           "description": "Uso estratégico de ferramentas de IA para acelerar ciclos de teste e aumentar a precisão.",
-          "icon": "Zap"
+          "icon": "Zap",
+          "metric": "IA integrada ao ciclo de QA"
         },
         {
           "title": "Testes Full-Stack",
           "description": "Domínio completo em automação de Web, Mobile e APIs, garantindo cobertura total.",
-          "icon": "Layers"
+          "icon": "Layers",
+          "metric": "Web · Mobile · API"
         },
         {
           "title": "Colaboração Ágil",
           "description": "Integração fluida em times Scrum, focada em feedback construtivo e melhoria de processos.",
-          "icon": "Users"
+          "icon": "Users",
+          "metric": "Scrum · GitHub Actions · CI/CD"
         }
       ]
     },
@@ -318,22 +322,26 @@
         {
           "title": "Quality-First Mindset",
           "description": "Ensuring every release meets the highest standards of excellence and functionality.",
-          "icon": "Verified"
+          "icon": "Verified",
+          "metric": "95%+ coverage guaranteed"
         },
         {
           "title": "AI-Driven Efficiency",
           "description": "Strategic use of AI tools to accelerate testing cycles and increase precision.",
-          "icon": "Zap"
+          "icon": "Zap",
+          "metric": "AI integrated into QA cycle"
         },
         {
           "title": "Full-Stack Testing",
           "description": "Complete mastery in Web, Mobile, and API automation, ensuring total coverage.",
-          "icon": "Layers"
+          "icon": "Layers",
+          "metric": "Web · Mobile · API"
         },
         {
           "title": "Agile Collaboration",
           "description": "Seamless integration into Scrum teams, focused on constructive feedback and process improvement.",
-          "icon": "Users"
+          "icon": "Users",
+          "metric": "Scrum · GitHub Actions · CI/CD"
         }
       ]
     },

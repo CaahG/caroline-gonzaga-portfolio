@@ -35,6 +35,7 @@ export interface ValuePropositionItem {
   title: string;
   description: string;
   icon: string;
+  metric: string;
 }
 
 export interface ValueProposition {

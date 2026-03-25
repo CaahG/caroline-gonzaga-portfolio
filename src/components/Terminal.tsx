@@ -8,16 +8,16 @@ interface TerminalProps {
 
 export const Terminal = ({ lines, title = "test_execution.log" }: TerminalProps) => {
   return (
-    <div className="w-full rounded-xl overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl font-mono text-sm">
-      <div className="bg-slate-900 px-4 py-2 flex items-center justify-between border-b border-slate-800">
+    <div className="w-full rounded-xl overflow-hidden border border-[#ddd6fe] bg-[#faf5ff] shadow-xl shadow-primary/10 font-mono text-sm">
+      <div className="bg-[#f0e8fb] px-4 py-2 flex items-center justify-between border-b border-[#ddd6fe]">
         <div className="flex items-center gap-2">
           <TerminalIcon className="w-4 h-4 text-primary" />
-          <span className="text-slate-400 text-xs">{title}</span>
+          <span className="text-[#9068b8] text-xs">{title}</span>
         </div>
         <div className="flex gap-1.5">
-          <Circle className="w-2.5 h-2.5 fill-slate-700 text-transparent" />
-          <Circle className="w-2.5 h-2.5 fill-slate-700 text-transparent" />
-          <Circle className="w-2.5 h-2.5 fill-slate-700 text-transparent" />
+          <Circle className="w-2.5 h-2.5 fill-[#ddd6fe] text-transparent" />
+          <Circle className="w-2.5 h-2.5 fill-[#ddd6fe] text-transparent" />
+          <Circle className="w-2.5 h-2.5 fill-[#ddd6fe] text-transparent" />
         </div>
       </div>
       <div className="p-4 space-y-1">
@@ -29,8 +29,8 @@ export const Terminal = ({ lines, title = "test_execution.log" }: TerminalProps)
             transition={{ delay: idx * 0.15 }}
             className="flex gap-3"
           >
-            <span className="text-slate-600 select-none">{idx + 1}</span>
-            <span className={line.includes('✓') || line.includes('PASS') ? 'text-primary' : line.includes('FAIL') ? 'text-error' : 'text-slate-300'}>
+            <span className="text-[#c4b5fd] select-none">{idx + 1}</span>
+            <span className={line.includes('✓') || line.includes('PASS') ? 'text-primary font-bold' : line.includes('FAIL') ? 'text-error' : 'text-[#4a2d80]'}>
               {line}
             </span>
           </motion.div>

@@ -116,52 +116,54 @@ export const ProjectVisual = ({ title, image }: ProjectVisualProps) => {
     const lines = getCodeSnippet();
 
     return (
-        <div className="w-full h-full bg-[#0a0c10] p-6 font-mono text-[11px] relative overflow-hidden group/visual">
-            {/* Background Grid Pattern */}
-            <div className="absolute inset-0 qa-grid opacity-10"></div>
+        <div className="w-full h-full bg-[#f8f5ff] font-mono text-[11px] relative overflow-hidden group/visual flex flex-col">
+            {/* Editor title bar */}
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#ede9fe] border-b border-[#ddd6fe] shrink-0">
+                <div className="flex gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-red-400/70"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-400/70"></div>
+                </div>
+                <span className="text-[10px] text-[#9068b8] ml-2 select-none">
+                    {lines[0]?.slice(0, 28)}…
+                </span>
+            </div>
 
-            {/* Background Image if available */}
+            {/* Background Image overlay if available */}
             {image && (
                 <div
-                    className="absolute inset-0 z-0 opacity-20 transition-opacity group-hover/visual:opacity-40"
+                    className="absolute inset-0 z-0 opacity-5 transition-opacity group-hover/visual:opacity-10"
                     style={{
                         backgroundImage: `url(${image})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
-                        filter: 'grayscale(100%) contrast(150%)'
                     }}
                 />
             )}
 
-            {/* Window Controls Overlay */}
-            <div className="absolute top-4 left-6 flex gap-1.5 opacity-40 group-hover/visual:opacity-100 transition-opacity">
-                <div className="w-2 h-2 rounded-full bg-red-500/50"></div>
-                <div className="w-2 h-2 rounded-full bg-yellow-500/50"></div>
-                <div className="w-2 h-2 rounded-full bg-green-500/50"></div>
-            </div>
-
-            <div className="mt-6 space-y-1 relative z-10">
+            {/* Code lines */}
+            <div className="flex-1 p-4 space-y-0.5 relative z-10 overflow-hidden">
                 {lines.map((line, idx) => (
                     <motion.div
                         key={idx}
                         initial={{ opacity: 0, x: -5 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5 + idx * 0.1 }}
-                        className="whitespace-pre"
+                        transition={{ delay: 0.3 + idx * 0.08 }}
+                        className="whitespace-pre flex gap-3"
                     >
-                        <span className="text-slate-600 mr-4 select-none inline-block w-4">{idx + 1}</span>
-                        <span className="text-slate-400">
-                            {line.split(/(await|test|expect|it|describe|should|const|new|return)/).map((part, i) => {
+                        <span className="text-[#c4b5fd] select-none w-4 text-right shrink-0">{idx + 1}</span>
+                        <span className="text-[#4a2d80]">
+                            {line.split(/(await|test|expect|it\b|describe|should|const|new\b|return)/).map((part, i) => {
                                 const colors: Record<string, string> = {
-                                    'await': 'text-purple-400',
-                                    'test': 'text-blue-400',
-                                    'it': 'text-blue-400',
-                                    'describe': 'text-blue-400',
-                                    'expect': 'text-primary',
-                                    'should': 'text-primary',
-                                    'const': 'text-purple-400',
-                                    'new': 'text-purple-400',
-                                    'return': 'text-purple-400'
+                                    'await':    'text-[#7c3aed] font-semibold',
+                                    'const':    'text-[#7c3aed] font-semibold',
+                                    'new':      'text-[#7c3aed] font-semibold',
+                                    'return':   'text-[#7c3aed] font-semibold',
+                                    'test':     'text-primary font-semibold',
+                                    'it':       'text-primary font-semibold',
+                                    'describe': 'text-primary font-semibold',
+                                    'expect':   'text-secondary font-semibold',
+                                    'should':   'text-secondary font-semibold',
                                 };
                                 return <span key={i} className={colors[part] || ''}>{part}</span>;
                             })}
@@ -170,14 +172,17 @@ export const ProjectVisual = ({ title, image }: ProjectVisualProps) => {
                 ))}
             </div>
 
-            {/* Decorative pulse in the corner */}
-            <div className="absolute bottom-4 right-6 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_rgba(0,255,136,0.5)]"></div>
-                <span className="text-[10px] text-primary/50 font-bold uppercase tracking-widest">Live Suite</span>
+            {/* Live Suite badge */}
+            <div className="absolute bottom-3 right-4 flex items-center gap-1.5 z-10">
+                <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                <span className="text-[10px] text-primary font-bold uppercase tracking-widest">Live Suite</span>
             </div>
 
-            {/* Scanning gradient on hover */}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent h-1/2 w-full -translate-y-full group-hover/visual:translate-y-[200%] transition-transform duration-[2000ms] ease-linear pointer-events-none opacity-30"></div>
+            {/* Hover shimmer */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover/visual:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
         </div>
     );
 };
